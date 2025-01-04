@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,43 +21,69 @@
       </div>
     </div>
 
-    <header class="container flex justify-between items-center gap-8 py-8">
+    <header class="container flex items-center justify-between gap-8 py-8">
       <a href="./">
         <img src="./img/forest.svg" alt="Forest" />
       </a>
-      <nav>
-        <ul class="text-white text-xl flex flex-wrap gap-8">
+      <nav
+        id="mobile-menu"
+        class="lg:block hidden items-center z-40 max-lg:fixed max-lg:w-full max-lg:inset-0"
+      >
+        <div
+          class="fixed lg:hidden inset-0 bg-verde-950/40 backdrop-blur-md"
+        ></div>
+        <ul
+          class="text-white text-2xl max-lg:divide-y-2 max-lg:divide-white/10 max-lg:z-50 max-lg:absolute max-lg:p-8 max-lg:w-full lg:text-xl lg:flex lg:flex-wrap lg:gap-8"
+        >
           <li>
             <a
-              class="hover:underline hover:underline-offset-8"
+              class="p-4 lg:px-0 lg:py-2 block max-lg:hover:bg-white/10 lg:hover:underline lg:hover:underline-offset-8"
               href="#acomodacoes"
               >Acomodações</a
             >
           </li>
           <li>
-            <a class="hover:underline hover:underline-offset-8" href="#eventos"
+            <a
+              class="p-4 lg:px-0 lg:py-2 block max-lg:hover:bg-white/10 lg:hover:underline lg:hover:underline-offset-8"
+              href="#eventos"
               >Eventos</a
             >
           </li>
           <li>
             <a
-              class="hover:underline hover:underline-offset-8"
-              href="experiencias"
+              class="p-4 lg:px-0 lg:py-2 block max-lg:hover:bg-white/10 lg:hover:underline lg:hover:underline-offset-8"
+              href="#experiencias"
               >Experiências</a
             >
           </li>
           <li>
-            <a class="hover:underline hover:underline-offset-8" href="#contato"
+            <a
+              class="p-4 lg:px-0 lg:py-2 block max-lg:hover:bg-white/10 lg:hover:underline lg:hover:underline-offset-8"
+              href="#contato"
               >Contato</a
             >
           </li>
         </ul>
       </nav>
+
+      <button
+        id="mobile-button"
+        class="flex items-center gap-3 bg-verde-400 text-verde-900 py-2 px-4 rounded-full lg:hidden"
+      >
+        Menu
+        <span
+          class="h-3 w-4 flex flex-col justify-between *:h-0.5 *:rounded-md *:bg-verde-800"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
     </header>
 
     <main class="container">
       <div
-        class="relative px-8 pb-8 pt-64 text-white rounded-2xl overflow-hidden bg-gradient-to-t from-verde-950/80 max-sm:pt-12 max-sm:px-4"
+        class="relative px-8 pb-8 pt-64 bg-gradient-to-t from-verde-950/80 text-white rounded-2xl overflow-hidden max-sm:px-4 max-sm:pt-12"
       >
         <img
           class="absolute inset-0 size-full object-cover -z-10"
@@ -65,7 +91,7 @@
           alt=""
         />
         <div
-          class="bg-verde-950/60 flex flex-col gap-2 p-4 items-start rounded-xl mb-8 sm:bg-verde-950 sm:inline-flex sm:flex-row sm:items-center sm:gap-8 sm:py-1 sm:pl-4 sm:pr-1 sm:rounded-full"
+          class="bg-verde-950/60 rounded-xl flex flex-col items-start gap-2 p-4 mb-8 sm:gap-8 sm:items-center sm:py-1 sm:pl-4 sm:pr-1 sm:bg-verde-950 sm:inline-flex sm:flex-row sm:rounded-full"
         >
           vagas para dezembro abertas
           <a
@@ -75,9 +101,9 @@
           >
         </div>
         <h1
-          class="mb-8 font-serif text-4xl sm:text-5xl sm:mb-20 max-w-screen-sm text-balance"
+          class="mb-8 font-serif text-balance max-w-screen-sm text-4xl sm:mb-20 sm:text-5xl"
         >
-          Venha experimentar a Vida na Floresta
+          Venha Experimentar a Vida na Floresta
         </h1>
         <div class="text-sm sm:flex justify-between items-end">
           <p class="max-sm:mb-4">
@@ -94,7 +120,7 @@
               <img
                 class="w-28"
                 src="./img/parceiros/wildbeast.svg"
-                alt="wildbeast"
+                alt="Wildbeast"
               />
               <span>|</span>
               Revista Nacional
@@ -104,9 +130,10 @@
       </div>
     </main>
 
+    <!-- acomodacoes -->
     <section
       id="acomodacoes"
-      class="container pt-16 mb-12 sm:mb-16 grid gap-8 lg:grid-cols-[2fr_3fr]"
+      class="container grid lg:grid-cols-[2fr_3fr] gap-8 pt-16 mb-12 sm:mb-16"
     >
       <div
         class="content-end bg-[url('./img/padrao.svg')] bg-no-repeat bg-contain bg-left-bottom"
@@ -147,7 +174,7 @@
             alt="Casa 1"
           />
           <span
-            class="uppercase text-white rounded-full bg-verde-950/60 px-4 py-2 text-sm/none self-start justify-self-end m-2"
+            class="m-2 self-start justify-self-end uppercase text-white rounded-full bg-verde-950/60 px-4 py-2 text-sm/none"
             >Ruby</span
           >
         </div>
@@ -158,7 +185,7 @@
             alt="Casa 2"
           />
           <span
-            class="uppercase text-white rounded-full bg-verde-950/60 px-4 py-2 text-sm/none self-start justify-self-end m-2"
+            class="m-2 self-start justify-self-end uppercase text-white rounded-full bg-verde-950/60 px-4 py-2 text-sm/none"
             >Emerald</span
           >
         </div>
@@ -169,13 +196,14 @@
             alt="Casa 3"
           />
           <span
-            class="uppercase text-white rounded-full bg-verde-950/60 px-4 py-2 text-sm/none self-start justify-self-end m-2"
+            class="m-2 self-start justify-self-end uppercase text-white rounded-full bg-verde-950/60 px-4 py-2 text-sm/none"
             >Saphire</span
           >
         </div>
       </div>
     </section>
 
+    <!-- eventos -->
     <section id="eventos" class="mb-12 sm:mb-16 py-12 sm:py-16 bg-verde-900">
       <div class="container">
         <p
@@ -184,15 +212,15 @@
           Conecte-se com a natureza
         </p>
         <h2
-          class="font-serif mb-8 mx-auto max-screen-md text-center text-balance text-white text-4xl sm:text-6xl"
+          class="mb-8 mx-auto font-serif text-balance text-center max-w-screen-md text-white text-4xl sm:text-6xl"
         >
           Cada Som, Cada Momento, Uma Nova Descoberta
         </h2>
         <div
-          class="snap-x snap-mandatory overflow-x-auto pb-4 grid gap-4 sm:gap-8 grid-cols-[repeat(3,minmax(300px,1fr))]"
+          class="overflow-x-auto snap-x snap-mandatory pb-4 grid grid-cols-[repeat(3,minmax(300px,1fr))] gap-4 sm:gap-8"
         >
           <div
-            class="snap-center grid gap-4 bg-verde-800 p-6 sm:p-8 rounded-xl"
+            class="grid snap-center gap-4 bg-verde-800 p-6 sm:p-8 rounded-xl"
           >
             <h3 class="text-verde-300 text-2xl font-serif">Lua Nova</h3>
             <div class="text-white">
@@ -210,7 +238,7 @@
             >
           </div>
           <div
-            class="snap-center grid gap-4 bg-verde-800 p-6 sm:p-8 rounded-xl"
+            class="grid snap-center gap-4 bg-verde-800 p-6 sm:p-8 rounded-xl"
           >
             <h3 class="text-verde-300 text-2xl font-serif">Aurora Boreal</h3>
             <div class="text-white">
@@ -228,7 +256,7 @@
             >
           </div>
           <div
-            class="snap-center grid gap-4 bg-verde-800 p-6 sm:p-8 rounded-xl"
+            class="grid snap-center gap-4 bg-verde-800 p-6 sm:p-8 rounded-xl"
           >
             <h3 class="text-verde-300 text-2xl font-serif">
               Chuva de Meteoros
@@ -251,6 +279,7 @@
       </div>
     </section>
 
+    <!-- experiencias -->
     <section
       id="experiencias"
       class="container mb-12 sm:mb-16 grid sm:grid-cols-2 gap-8"
@@ -260,9 +289,9 @@
           Experiências Exclusivas
         </p>
         <h2
-          class="mb-8 font-serif text-balance text-white text-3xl sm:text-4xl lg:text-5xl"
+          class="mb-8 font-serif text-balance text-white text-3xl sm:text-4xl lg:text-5xl capitalize"
         >
-          Escolha Sua Próxima Aventura
+          Escolha sua próxima aventura
         </h2>
         <h3
           class="text-white text-xl flex items-center gap-4 before:h-0.5 before:w-6 before:bg-verde-400 hover:before:w-10 before:transition-[width]"
@@ -292,38 +321,38 @@
       <div class="grid grid-cols-2 gap-4">
         <div class="group relative cursor-pointer overflow-hidden rounded-xl">
           <img
-            class="size-full object-cover group-hover:scale-110 transition-transform"
+            class="size-full object-cover transition-transform group-hover:scale-110"
             src="./img/canoagem.jpg"
             alt="canoagem"
           />
           <div
-            class="flex items-end p-4 absolute inset-0 bg-gradient-to-t from-verde-950/80 opacity-0 group-hover:opacity-100 transition-opacity"
+            class="absolute flex items-end p-4 inset-0 bg-gradient-to-t from-verde-950/80 opacity-0 transition-opacity group-hover:opacity-100"
           >
             <span class="text-white">Canoagem</span>
           </div>
         </div>
         <div
-          class="row-span-2 group relative cursor-pointer overflow-hidden rounded-xl"
+          class="group row-span-2 relative cursor-pointer overflow-hidden rounded-xl"
         >
           <img
-            class="size-full object-cover group-hover:scale-110 transition-transform"
+            class="size-full object-cover transition-transform group-hover:scale-110"
             src="./img/observacao-noturna.jpg"
             alt="Observação Noturna"
           />
           <div
-            class="flex items-end p-4 absolute inset-0 bg-gradient-to-t from-verde-950/80 opacity-0 group-hover:opacity-100 transition-opacity"
+            class="absolute flex items-end p-4 inset-0 bg-gradient-to-t from-verde-950/80 opacity-0 transition-opacity group-hover:opacity-100"
           >
             <span class="text-white">Observação Noturna</span>
           </div>
         </div>
         <div class="group relative cursor-pointer overflow-hidden rounded-xl">
           <img
-            class="size-full object-cover group-hover:scale-110 transition-transform"
+            class="size-full object-cover transition-transform group-hover:scale-110"
             src="./img/vida-selvagem.jpg"
             alt="Vida Selvagem"
           />
           <div
-            class="flex items-end p-4 absolute inset-0 bg-gradient-to-t from-verde-950/80 opacity-0 group-hover:opacity-100 transition-opacity"
+            class="absolute flex items-end p-4 inset-0 bg-gradient-to-t from-verde-950/80 opacity-0 transition-opacity group-hover:opacity-100"
           >
             <span class="text-white">Vida Selvagem</span>
           </div>
@@ -331,6 +360,7 @@
       </div>
     </section>
 
+    <!-- ciclo natural -->
     <section
       class="container bg-[url('./img/padrao.svg')] bg-contain bg-center bg-no-repeat mb-12 sm:mb-16 sm:py-16"
     >
@@ -344,12 +374,13 @@
       >
         Ritmo da Floresta
       </h2>
-      <div class="flex flex-col sm:flex-row gap-4 sm:gap-8">
+
+      <div class="flex flex-col gap-4 sm:flex-row sm:gap-8">
         <div
-          class="flex-1 grid gap-4 bg-verde-900 p-6 sm:p-8 rounded-xl transition-transform sm:hover:-translate-y-2"
+          class="grid flex-1 gap-4 bg-verde-900 p-6 sm:p-8 rounded-xl transition-transform sm:hover:-translate-y-2"
         >
           <div
-            class="bg-green-400 size-10 flex items-center justify-center rounded-full"
+            class="bg-verde-400 rounded-full size-10 flex items-center justify-center"
           >
             <img src="./img/manha.svg" alt="" />
           </div>
@@ -361,10 +392,10 @@
           <span class="text-verde-300">05:40 - 07:00</span>
         </div>
         <div
-          class="flex-1 grid gap-4 bg-verde-900 p-6 sm:p-8 rounded-xl transition-transform sm:hover:translate-y-10 sm:translate-y-12"
+          class="grid flex-1 gap-4 bg-verde-900 p-6 sm:p-8 rounded-xl transition-transform sm:translate-y-12 sm:hover:translate-y-10"
         >
           <div
-            class="bg-green-400 size-10 flex items-center justify-center rounded-full"
+            class="bg-verde-400 rounded-full size-10 flex items-center justify-center"
           >
             <img src="./img/dia.svg" alt="" />
           </div>
@@ -376,10 +407,10 @@
           <span class="text-verde-300">12:00 - 14:00</span>
         </div>
         <div
-          class="flex-1 grid gap-4 bg-verde-900 p-6 sm:p-8 rounded-xl transition-transform sm:hover:-translate-y-2"
+          class="grid flex-1 gap-4 bg-verde-900 p-6 sm:p-8 rounded-xl transition-transform sm:hover:-translate-y-2"
         >
           <div
-            class="bg-green-400 size-10 flex items-center justify-center rounded-full"
+            class="bg-verde-400 rounded-full size-10 flex items-center justify-center"
           >
             <img src="./img/noite.svg" alt="" />
           </div>
@@ -392,12 +423,13 @@
       </div>
     </section>
 
+    <!-- contato -->
     <section
       id="contato"
       class="container mb-12 sm:mb-16 grid lg:grid-cols-2 gap-8"
     >
       <div>
-        <h1 class="font-serif text-4xl text-verde-300 mb-4">Nossos contatos</h1>
+        <h1 class="font-serif text-4xl text-verde-300 mb-4">Nossos Contatos</h1>
         <p class="text-gray-200 text-balance mb-8">
           Tem interesse em passar uma temporada na Forest? Entre em contato com
           a gente por telefone ou email.
@@ -405,19 +437,21 @@
         <div class="grid gap-4">
           <div>
             <span class="h-0.5 w-6 bg-verde-400 inline-block"></span>
-            <h2 class="text-verde-300 mb-2 font-serif">Base</h2>
+            <h2 class="mb-2 text-2xl text-verde-300 font-serif">Base</h2>
             <p class="text-gray-300">
               Rua da Mata, 123 - Floresta Nacional - RJ
             </p>
           </div>
+
           <div>
             <span class="h-0.5 w-6 bg-verde-400 inline-block"></span>
-            <h2 class="text-verde-300 mb-2 font-serif">Email</h2>
+            <h2 class="mb-2 text-2xl text-verde-300 font-serif">Email</h2>
             <p class="text-gray-300">contato@forest.com</p>
           </div>
+
           <div>
             <span class="h-0.5 w-6 bg-verde-400 inline-block"></span>
-            <h2 class="text-verde-300 mb-2 font-serif">Telefone</h2>
+            <h2 class="mb-2 text-2xl text-verde-300 font-serif">Telefone</h2>
             <p class="text-gray-300">21 99999-9999</p>
           </div>
         </div>
@@ -457,11 +491,11 @@
           </div>
         </div>
         <div class="grid gap-1">
-          <label class="text-white" for="telefone">Mensagem</label>
+          <label class="text-white" for="mensagem">Mensagem</label>
           <textarea
-            rows="5"
             id="mensagem"
             name="mensagem"
+            rows="5"
             class="rounded-md border-2 border-verde-800 bg-verde-800 p-2 text-white focus:outline-none focus:ring-2 focus:ring-verde-400 focus:border-verde-900 placeholder:text-verde-900 resize-none"
             type="text"
           ></textarea>
@@ -474,9 +508,10 @@
       </form>
     </section>
 
+    <!-- parceiros -->
     <section class="container mb-12 sm:mb-16">
       <ul
-        class="flex flex-col items-center py-4 max-sm:divide-y-2 max-sm:divide-verde-900 *:p-4 *:*:max-h-8 sm:flex-row sm:gap-8 sm:border-b-2 sm:border-t-2 sm:border-verde-900 sm:py-8"
+        class="flex flex-col items-center py-4 max-sm:divide-y-2 max-sm:divide-verde-900 *:p-4 sm:flex-row sm:gap-8 sm:border-b-2 sm:border-t-2 sm:border-verde-900 sm:py-8 *:*:max-h-8"
       >
         <li><img src="./img/parceiros/caravan.svg" alt="Caravan" /></li>
         <li><img src="./img/parceiros/dogs.svg" alt="Dogs" /></li>
@@ -520,5 +555,20 @@
         </ul>
       </div>
     </footer>
+
+    <script>
+      const mobileButton = document.getElementById('mobile-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      mobileButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        mobileMenu.classList.toggle('flex');
+      });
+
+      mobileMenu.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('flex');
+      });
+    </script>
   </body>
 </html>
